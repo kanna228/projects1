@@ -1,0 +1,719 @@
+
+/* По умолчанию скрыть сообщение для маленьких экранов */
+.small-screen-message {
+    display: none;
+}
+
+/* Скрывать весь основной контент на экранах шириной менее 1080px */
+@media (max-width: 1919px) {
+    .asd {
+        display: none; /* Скрываем весь контент */
+    }
+    .small-screen-message {
+        display: block; /* Показываем сообщение */
+        text-align: center;
+        margin: 0;
+        margin-top: 20%;
+        font-size: 50px;
+        color: black;
+    }
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #66a5ad;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/*header*/
+/* Хедер и навигация */
+.header-container {
+    background-color: #003b46;
+    padding-bottom: 20px;
+    padding-top: 25px;
+    white-space: nowrap;
+    font-family: none;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    font-family: 'Copperplate', 'Copperplate Gothic Light', 'Copperplate Gothic Bold', serif;
+}
+
+.nav-list .nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item {
+    margin-left: 10%;
+    padding-top: 15px;
+    text-decoration: none;              
+    color: white;
+}
+
+.nav-item.logo {
+    margin-left: 3%;
+    font-family: 'Copperplate', 'Copperplate Gothic Light', 'Copperplate Gothic Bold', serif;
+    font-size: 30px;
+    padding: 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-first-item a {
+    text-decoration: none;
+    color: white;
+}
+.nav-first-item {
+    margin-left: 15%;
+    padding-top: 15px;
+}
+.nav-item-button{
+    margin-left: 10%;
+    text-decoration: none;
+    color: white;
+}
+
+
+    
+/* Поисковая форма */
+.search-form {
+    margin-left: 10%;
+}
+
+.search-form input[type="text"],
+.search-form input[type="submit"] {
+    padding: 5px;
+}
+
+/* Popup */
+.popup {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: visibility 0.3s, opacity 0.3s;
+}
+
+.popup-content {
+    background-color: #003b46; 
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: left;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px; 
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    margin-top: 15px;
+}
+
+
+/*register*/
+.registration-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #003b46;
+    border-radius: 10px;
+    margin-bottom: 200px;
+    margin-top: 200px;
+}
+
+.registration-container h2 {
+    text-align: center;
+}
+
+.registration-form {
+    width: 100%;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;    
+    max-width: 100%; 
+}
+
+.registration-form button[type="submit"],
+.registration-form .google-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #66a5ad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.registration-form .google-button {
+    background-color: #db4437;
+    margin-top: 20px;
+    width: 100%;    
+    max-width: 100%; 
+    white-space: nowrap;
+
+}
+
+.registration-form .alternative-login {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.registration-form .alternative-login p {
+    margin: 0;
+}
+
+
+/*main page*/
+.main-content {
+    font-family: Georgia, serif;
+}
+
+.company-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-container {
+    display: inline-block;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.main-title {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', 'Copperplate Gothic Bold', serif;
+    font-size: 50px;
+}
+
+.main-description {
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.5;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    background-color: #07575b;
+    font-family: 'Copperplate', 'Copperplate Gothic Light', 'Copperplate Gothic Bold', serif;
+    padding: 8px;
+}
+
+/*footer*/
+.footer {
+    text-align: center;
+    background-color: #003b46;
+    margin: 0;
+    padding-bottom: 1%;
+    padding-top: 40px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.footer-list {
+    white-space: nowrap;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-item {
+    margin-left: 10%;
+    padding-top: 20px;
+}
+
+.footer-item.logo {
+    margin-left: 3%;
+    font-family: 'Copperplate', 'Copperplate Gothic Light', 'Copperplate Gothic Bold', serif;
+    font-size: 30px;
+    padding-top: 4px;
+}
+.footer-first-item {
+    margin-left: 30%;
+    padding-top: 20px;
+} 
+.footer-first-item a {
+    text-decoration: none;
+    color: white;
+}
+.footer-item a {
+    text-decoration: none;
+    color: white;
+}
+.footer-credits{
+    display: flex;
+    justify-content: end;
+    padding-right: 20px
+}
+
+
+/* Темная тема */
+.dark-theme {
+    background-color: #ffccf2; /* Светлый розовый фон */
+    color: #660033; /* Темный розовый цвет текста */
+}
+
+.dark-theme .header-container, .dark-theme .footer {
+    background-color: #ff99cc; /* Темный розовый для хедера и футера */
+}
+
+.dark-theme .navbar, .dark-theme .footer-list a, .dark-theme .footer-credits {
+    color: #660033; /* Темный розовый цвет для текста навигации и футера */
+}
+
+.dark-theme .btn {
+    background-color: #ff66b2; /* Кнопки в розовых тонах */
+    border-color: #ff99cc;
+}
+
+.dark-theme .main-description, .dark-theme .main-title {
+    color: #660033; /* Темный розовый текст для основного контента */
+}
+
+/* Добавляем стиль для блока message */
+.dark-theme .message {
+    background-color: #faa2ce; /* Фон для блока message в темном розовом */
+    color: #660033; /* Темный розовый текст */
+}
+.section .content .btn.pink {
+    background-color: pink; /* Цвет фона кнопок */
+    color: black; /* Цвет текста кнопок */
+    border: none; /* Убираем рамку */
+}   
+
+/* Цвет кнопок при наведении в розовой теме */
+.section .content .btn.pink:hover {
+    background-color: #ff69b4; /* Цвет фона кнопок при наведении */
+    color: white; /* Цвет текста при наведении */
+}
+.dark-theme .registration-container{
+    background-color: #faa2ce;
+    color: #660033;
+}
+.dark-mode .btn-primary {
+    background-color: #faa2ce;
+    border-color: #ff99cc;
+}
+
+/* Dark theme styles */
+.dark-theme .left-side-window,
+.dark-theme .main-window,
+.dark-theme .right-side-window {
+    background-color: #ff99cc; /* Darker background for dark theme */
+}
+
+.dark-theme .size-buttons,
+.dark-theme .purchase-button {
+    background-color: #d5006d; /* Pink button color */
+    color: white; /* Ensure text is white for contrast */
+}
+.dark-theme .faq-answer{
+    color: white; 
+    background-color: #ff99cc; 
+    border-left: 25px solid #ffccf2; 
+} 
+.dark-theme .faq-question{ 
+   color: white; 
+   background-color: #ff99cc; 
+} 
+.dark-theme .faq-question:hover{ 
+   background-color: #fac1dd; 
+}
+.dark-theme .popup-content{
+    background-color: #fac1dd; 
+}
+
+.dark-theme .section .content a{
+    background-color: #ff99cc; 
+}
+
+.dark-theme .registration-form button{
+    background-color: #ff66b2;
+}
+.dark-theme .team-card{
+    background-color: #ff66b2;
+}
+.dark-theme .weather-widget{
+    background-color: #ff99cc;
+}
+
+
+
+
+/*choosing*/
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.section .content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.section .content a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #07575b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.men {
+    background-image: url('https://www.menswearstyle.co.uk/content/blogs/9224fdd8-f731-46aa-a1ff-7df98ca88f4e_blog_ln_.jpg');
+}
+
+.women {
+    background-image: url('https://gatherandsee.com/cdn/shop/files/APN-19_900x_1344b287-e6b0-4c53-992f-9441ad77ec0e_900x.jpg?v=1710227797');
+}
+
+
+
+/*products*/
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    list-style-type: none;
+}
+
+.product-list li {
+    margin: 15px;
+}
+
+.product-list button {
+    background-color: #003b46;
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product-list button img {
+    width: 270px;
+    height: 320px;
+}
+
+.product-list p {
+    margin: 5px 0;
+}
+
+.product-list .price {
+    font-size: 12px;
+}
+
+/*purchase*/
+
+.left-side-window{
+    background-color: #07575b;
+    height: 200px;
+    width: 200px;
+    margin-inline: 100px;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.main-window{
+    background-color: #07575b;
+    height: 550px;
+    width: 350px;
+    margin-inline: 50px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.right-side-window{
+    background-color: #07575b;
+    height: 550px;
+    width: 200px;
+    margin-inline: 50px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.size-buttons{
+    padding: 0px 40px;
+    background-color: #003b46;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    margin: 5px;
+}
+
+.purchase-button{
+    padding: 10px 20px;
+    background-color: #003b46;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+.carousel-control-prev-icon {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(180deg) brightness(0) contrast(100%);
+}
+
+.carousel-control-next-icon {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(180deg) brightness(0) contrast(100%);
+}
+
+
+.faq-section { 
+    max-width: 800px; 
+    margin: 0 auto; 
+} 
+h1 { 
+    text-align: center; 
+} 
+.faq-item { 
+    margin-bottom: 15px; 
+} 
+.faq-question { 
+    font-size: 18px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    background-color: #07575b; 
+    padding: 10px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+} 
+.faq-question:hover {
+    background-color: #0a757b; 
+}    
+.faq-answer { 
+    display: none; 
+    margin-top: 10px; 
+    padding: 10px; 
+    background-color: #045c60; 
+    border-left: 25px solid #66a5ad; 
+    border-radius: 3px; 
+}
+.faq-padding{
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.custom-btn {
+    display: block;          /* Делает элемент блочным, чтобы использовать margin */
+    width: 300px;            /* Устанавливает фиксированную ширину для кнопки */
+    margin: 0 auto;          /* Центрирует элемент по горизонтали */
+    padding: 10px 20px;      /* Добавляет дополнительное внутреннее расстояние для увеличения кнопки */
+    font-size: 18px;         /* Увеличивает размер текста */
+    text-align: center;      /* Центрирует текст внутри кнопки */
+    margin-bottom: 40px ;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Оставляем первичный цвет Bootstrap */
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Более тёмный цвет при наведении */
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+ul.item-list{
+    justify-content: center;
+    display: flex;
+    margin: 0;
+}
+.container-register {
+    display: flex;
+    height: 60vh;
+    margin: 0;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.invalid {
+    border-color: red;
+}
+
+.team-container {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+.team-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.team-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.team-card {
+    background-color: #07575b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.team-card img {
+    width: 100%;
+    height: 50%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+.team-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+.team-role {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+.team-bio {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.weather-widget {
+    background-color: #003b46;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.weather-widget h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.weather-widget p {
+    margin: 5px 0;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ZD Aura</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body">
+    <div class="small-screen-message">
+        <p>We are working on creating a website<br> 
+            work from your extension..<br>
+            Sorry...</p>
+    </div>
+    <div class="asd">
+        <audio id="background-music" loop>
+            <source src="day-song.mp3" type="audio/mp3">
+            <source src="night-song.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="header-container">  
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <a class=" nav-item logo  navbar-brand logo " href="main_page.html">ZD Aura</a>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item ">
+                                <a style="color: white;" class="nav-link  nav-list .nav-link" href="main_page.html">Main menu</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a style="color: white;" class="nav-link nav-list .nav-link" href="choosing.html">Shop</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a style="color: white;" class="nav-link nav-list .nav-link" href="about_us.html">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a style="color: white;" class="nav-link nav-list .nav-link" href="profile.html">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a style="color: white;" class="nav-link nav-list .nav-link" href="faq.html">Help</a>
+                            </li>
+                            <li class="nav-item-button"></li>
+                            <button id="theme-toggle-btn" class="btn btn-outline-light my-2">Switch Theme</button>
+                            </li>
+                            <li class="nav-item-button"></li>
+                            <button id="playMusic" class="btn btn-outline-light my-2">Play Music</button>
+                            </li>
+                        </ul>
+
+                        <form class="form-inline search-form my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Find" aria-label="Search">
+                            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <main style="width: 100%;">
+            <div style="width: 100%;" class="container">
+                <div class="section men">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h1>MEN</h1>
+                        <a href="shirts.html" class="btn-primary">Tops</a>
+                        <a href="jeans.html" class="btn-primary">Bottoms</a>
+                        <a href="accessories.html" class="btn-primary">Accessories</a>
+                    </div>  
+                </div>
+                <div class="section women">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h1>WOMEN</h1>
+                        <a href="shirts.html" class="btn-primary">Tops</a>
+                        <a href="jeans.html" class="btn-primary">Bottoms</a>
+                        <a href="accessories.html" class="btn-primary">Accessories</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer text-white">
+            <nav>
+                <ul class="footer-list d-flex">
+                    <li class="footer-item logo"><a href="main_page.html" class="text-white">ZD Aura</a></li>
+                    <li class="footer-first-item"><a href="https://www.instagram.com/" class="text-white">Instagram</a></li>
+                    <li class="footer-item"><a href="https://x.com/?lang=ru" class="text-white">Twitter</a></li>
+                    <li class="footer-item"><a href="https://web.telegram.org/k/#@mirsjex" class="text-white">Telegram</a></li>
+                </ul>
+            </nav>
+            <div style="margin-top:4% ;" id="date-time"></div>
+            <p class="footer-credits text-right pr-3">Abdimanap Dias<br>Turgimbayev Amirkhan<br>Zhetpissov Zhandarbek</p>
+        </footer>
+    </div> 
+    <script src="script_theme.js"></script>
+    <script src="script_time.js"></script>
+    <script src="script_music.js"> </script>
+    <script src="search.js"></script>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
